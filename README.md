@@ -23,4 +23,4 @@ Aplikacija omogućava unos dva broja i prikaz rezultata odabrane operacije.
 npm install
 npm run dev
 
-https://vercel.com/faanstes-projects/vite-react-calculator/6EBrVu3ZcmwGapSsYt1URVnj787G
+https://vite-react-calculator-sandy.vercel.app/

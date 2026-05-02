@@ -6,51 +6,127 @@
   font-family: sans-serif;
 }
 
-/* Centriranje cijele stranice */
 body {
-  background: #f4f6f8;
+  background: #1a1d2e;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-/* Glavni kontejner */
-div {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+.calculator {
+  background: #252837;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  width: 360px;
   text-align: center;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 24px;
 }
 
-button {
-  margin: 5px;
-  padding: 10px 15px;
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.inputs input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #3a3d52;
+  border-radius: 8px;
   font-size: 16px;
-  border: none;
+  text-align: center;
+  background: #1a1d2e;
+  color: #e0e0e0;
+}
+
+.inputs input::placeholder {
+  color: #555870;
+}
+
+.inputs input:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+.separator {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.ops {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.op-btn {
+  padding: 12px;
+  font-size: 20px;
+  border: 1px solid #3a3d52;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #4a90e2;
+  background: #1a1d2e;
+  color: #e0e0e0;
+  transition: background 0.15s;
+}
+
+.op-btn:hover {
+  background: #6c63ff;
+  border-color: #6c63ff;
   color: white;
-  transition: 0.2s;
 }
 
-button:hover {
-  background-color: #357abd;
+.op-btn.active {
+  background: #6c63ff;
+  border-color: #6c63ff;
+  color: white;
 }
 
-/* rezultat */
-h2 {
-  margin-top: 15px;
-  color: #333;
+.result {
+  background: #1a1d2e;
+  border: 1px solid #3a3d52;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 18px;
+  color: #e0e0e0;
+  margin-bottom: 16px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.result strong {
+  font-size: 20px;
+  color: #a78bfa;
+  margin-left: 6px;
+}
+
+
+.result .error {
+  color: #f87171;
+  font-size: 14px;
+}
+
+.reset-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #3a3d52;
+  border-radius: 8px;
+  cursor: pointer;
+  background: transparent;
+  color: #888;
+  transition: color 0.15s, border-color 0.15s;
+}
+
